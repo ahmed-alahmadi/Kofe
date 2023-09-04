@@ -55,6 +55,12 @@ class _HomeScreenState extends State<HomeScreen>
         const Text("Favorite"),
         const Text("Profile")
       ][_selectedIndex],
+      floatingActionButton: _selectedIndex == 0
+          ? FloatingActionButton(
+              onPressed: () {},
+              child: const Icon(Icons.add),
+            )
+          : null,
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
